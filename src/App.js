@@ -4,6 +4,7 @@ import UserJsx from './user.jsx';
 import Event from './Event';
 import State from './state';
 import Counter from './Counter.jsx';
+import StateClass from './stateClass.jsx';
 function App() {
 
   // function common() {
@@ -19,7 +20,9 @@ function App() {
       {/* <UserJsx /> */}
       {/* <Event /> */}
       {/* <State /> */}
-      <Counter />
+      { /* <Counter /> */}
+
+      <StateClass />
     </>
   );
 }
