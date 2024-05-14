@@ -5,6 +5,8 @@ import Event from './Event';
 import State from './state';
 import Counter from './Counter.jsx';
 import UserCard from './UserCard.jsx';
+import PropsClass from './propsClass.jsx';
+import UserList from './UserList';
 import React, { useState } from 'react';
 function App() {
 
@@ -12,6 +14,7 @@ function App() {
   //   return <p>Common component</p>
   // }
 
+  {/*
   const userData = [
     {
       name: 'bhaskar gupta',
@@ -30,6 +33,7 @@ function App() {
     }
   ]
 
+  */}
 
   const [name, setName] = React.useState("Bhaskar Gupta");
   return (
@@ -42,15 +46,13 @@ function App() {
       {/* <Event /> */}
       {/* <State /> */}
       {/* <Counter /> */}
-      <h1>Props In React.</h1>
-      <hr />
+      {/* <h1>Props In React.</h1> */}
+      {/* <hr /> */}
 
-
-      <UserCard name={name} />
+      {/* <UserCard name={name} />
 
       <button onClick={() => setName("Code4Education")}>Update Props</button>
-
-
+ */}
 
       {/* {
         userData.map((user, index) => (
@@ -63,8 +65,7 @@ function App() {
         ))
       } */}
 
-
-
+      <PropsClass />
     </>
   );
 }
