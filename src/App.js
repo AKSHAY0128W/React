@@ -2,7 +2,8 @@ import './App.css';
 import User from './user';
 import UserJsx from './user.jsx';
 import Event from './Event';
-
+import State from './state';
+import Counter from './Counter.jsx';
 function App() {
 
   // function common() {
@@ -12,12 +13,13 @@ function App() {
   return (
     <>
       <div className="App">
-        <h1>Hello World!</h1>
+        {/* <h1>Hello World!</h1> */}
       </div >
       {/* <User /> */}
-      {/* {common()} */}
       {/* <UserJsx /> */}
-      <Event />
+      {/* <Event /> */}
+      {/* <State /> */}
+      <Counter />
     </>
   );
 }
