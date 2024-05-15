@@ -13,6 +13,7 @@ import Toggle from './Toggle.jsx';
 import FormHandling from './FormHandling.jsx';
 import ConditionalRendering from './conditionalRendering.jsx';
 import FormValidation from './formValidation.jsx';
+import FuncProps from './FuncProps.jsx';
 function App() {
 
   // function common() {
@@ -38,14 +39,29 @@ function App() {
     }
   ]
 
-  */}
+  
+*/}
+  // const [name, setName] = React.useState("Bhaskar Gupta");
 
-  const [name, setName] = React.useState("Bhaskar Gupta");
+  // pass function as a props
+
+  const handleButtonClick = () => {
+    console.log("Button Clicked");
+  }
+
+  const [count, setCount] = useState(0);
+
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  }
+
+
   return (
     <>
-      <div className="App">
-        {/* <h1>Hello World!</h1> */}
-      </div >
+      {/* <div className="App"> */}
+      {/* <h1>Hello World!</h1> */}
+      {/* </div > */}
       {/* <User /> */}
       {/* <UserJsx /> */}
       {/* <Event /> */}
@@ -80,9 +96,12 @@ function App() {
 
       {/* <ConditionalRendering /> */}
 
+      {/* <FormValidation /> */}
 
-
-      <FormValidation />
+      <div>
+        <h1>Pass Funtions as a Props</h1>
+      </div>
+      <FuncProps handleClick={handleButtonClick} count={count} increment={incrementCount} />
 
     </>
   );
