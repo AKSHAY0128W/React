@@ -7,6 +7,7 @@ import Counter from './Counter.jsx';
 import UserCard from './UserCard.jsx';
 import PropsClass from './propsClass.jsx';
 import UserList from './UserList';
+import InputBox from './inputBox.jsx';
 import React, { useState } from 'react';
 function App() {
 
@@ -65,7 +66,13 @@ function App() {
         ))
       } */}
 
-      <PropsClass />
+      {/* <PropsClass /> */}
+
+      <InputBox />
+
+
+
+
     </>
   );
 }
