@@ -9,6 +9,7 @@ import PropsClass from './propsClass.jsx';
 import UserList from './UserList';
 import InputBox from './inputBox.jsx';
 import React, { useState } from 'react';
+import Toggle from './Toggle.jsx';
 function App() {
 
   // function common() {
@@ -68,7 +69,9 @@ function App() {
 
       {/* <PropsClass /> */}
 
-      <InputBox />
+      {/* <InputBox /> */}
+
+      <Toggle />
 
 
 
