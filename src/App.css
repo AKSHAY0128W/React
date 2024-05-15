@@ -40,6 +40,27 @@
   margin: 15px auto 40px;
 }
 
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #0c2830;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #0c2830;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+label {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+
 
 button {
   padding: 10px 20px;

@@ -10,6 +10,7 @@ import UserList from './UserList';
 import InputBox from './inputBox.jsx';
 import React, { useState } from 'react';
 import Toggle from './Toggle.jsx';
+import FormHandling from './FormHandling.jsx';
 function App() {
 
   // function common() {
@@ -71,8 +72,9 @@ function App() {
 
       {/* <InputBox /> */}
 
-      <Toggle />
+      {/* <Toggle /> */}
 
+      <FormHandling />
 
 
 
