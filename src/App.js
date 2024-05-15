@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import User from './user';
 import UserJsx from './user.jsx';
@@ -8,9 +9,9 @@ import UserCard from './UserCard.jsx';
 import PropsClass from './propsClass.jsx';
 import UserList from './UserList';
 import InputBox from './inputBox.jsx';
-import React, { useState } from 'react';
 import Toggle from './Toggle.jsx';
 import FormHandling from './FormHandling.jsx';
+import ConditionalRendering from './conditionalRendering.jsx';
 function App() {
 
   // function common() {
@@ -74,8 +75,9 @@ function App() {
 
       {/* <Toggle /> */}
 
-      <FormHandling />
+      {/* <FormHandling /> */}
 
+      <ConditionalRendering />
 
 
     </>
