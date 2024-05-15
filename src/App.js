@@ -12,6 +12,7 @@ import InputBox from './inputBox.jsx';
 import Toggle from './Toggle.jsx';
 import FormHandling from './FormHandling.jsx';
 import ConditionalRendering from './conditionalRendering.jsx';
+import FormValidation from './formValidation.jsx';
 function App() {
 
   // function common() {
@@ -77,8 +78,11 @@ function App() {
 
       {/* <FormHandling /> */}
 
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
 
+
+
+      <FormValidation />
 
     </>
   );
