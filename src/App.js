@@ -14,6 +14,7 @@ import FormHandling from './FormHandling.jsx';
 import ConditionalRendering from './conditionalRendering.jsx';
 import FormValidation from './formValidation.jsx';
 import FuncProps from './FuncProps.jsx';
+import Constructor from './Constructor.jsx';
 function App() {
 
   // function common() {
@@ -98,10 +99,13 @@ function App() {
 
       {/* <FormValidation /> */}
 
-      <div>
+      {/* <div>
         <h1>Pass Funtions as a Props</h1>
       </div>
-      <FuncProps handleClick={handleButtonClick} count={count} increment={incrementCount} />
+      <FuncProps handleClick={handleButtonClick} count={count} increment={incrementCount} /> */}
+
+
+      <Constructor />
 
     </>
   );
