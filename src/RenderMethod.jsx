@@ -23,6 +23,6 @@ class RenderMethod extends Component {
          </div>
       )
    }
-}n
+}
 
 export default RenderMethod
