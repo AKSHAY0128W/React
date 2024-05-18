@@ -12,8 +12,9 @@ function FuncProps(props) {
       <div>
          <h1>Users Component</h1>
 
-         <h1>{count}</h1>
-         <button onClickCapture={increment}>Click Me</button>
+         <h1>Count:{count}</h1>
+         <button onClickCapture={handleClick}>Click Me</button>
+         <button onClickCapture={increment}>Count ++</button>
       </div>
    )
 }
