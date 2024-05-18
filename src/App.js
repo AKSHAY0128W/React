@@ -15,6 +15,7 @@ import ConditionalRendering from './conditionalRendering.jsx';
 import FormValidation from './formValidation.jsx';
 import FuncProps from './FuncProps.jsx';
 import Constructor from './Constructor.jsx';
+import RenderMethod from './RenderMethod.jsx';
 function App() {
 
   // function common() {
@@ -46,17 +47,22 @@ function App() {
 
   // pass function as a props
 
-  const handleButtonClick = () => {
-    console.log("Button Clicked");
-  }
+  // const handleButtonClick = () => {
+  //   console.log("Button Clicked");
+  // }
 
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
 
-  const incrementCount = () => {
-    setCount(count + 1);
-  }
+  // const incrementCount = () => {
+  //   setCount(count + 1);
+  // }
 
+
+
+  // props for learn Lifecycle Render Method in React.
+
+  // const [name, setName] = useState("Bhaskar Gupta");
 
   return (
     <>
@@ -105,7 +111,13 @@ function App() {
       <FuncProps handleClick={handleButtonClick} count={count} increment={incrementCount} /> */}
 
 
-      <Constructor />
+      {/* <Constructor /> */}
+
+      <h1>Lifecycle Render Method in React.</h1>
+      {/* <RenderMethod name={name} /> */}
+      <RenderMethod />
+
+      {/* <button onClick={() => setName("Akshay Panchal")}>Update Name</button> */}
 
     </>
   );
