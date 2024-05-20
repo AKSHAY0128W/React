@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import './App.css';
-import User from './user';
-import UserJsx from './user.jsx';
-import Event from './Event';
-import State from './state';
-import Counter from './Counter.jsx';
-import UserCard from './UserCard.jsx';
-import PropsClass from './propsClass.jsx';
-import UserList from './UserList';
-import InputBox from './inputBox.jsx';
-import Toggle from './Toggle.jsx';
-import FormHandling from './FormHandling.jsx';
-import ConditionalRendering from './conditionalRendering.jsx';
-import FormValidation from './formValidation.jsx';
-import FuncProps from './FuncProps.jsx';
-import Constructor from './Constructor.jsx';
-import RenderMethod from './RenderMethod.jsx';
-import ComponeneDidMount from './ComponeneDidMount.jsx';
-import ComponentDidUpdate from './ComponentDidUpdate.jsx';
-import ShouldComponentUpdate from './ComponentShouldUpdate.jsx';
+import User from './Components/user';
+import UserJsx from './Components/user.jsx';
+import Event from './Components/Event';
+import State from './Components/state';
+import Counter from './Components/Counter.jsx';
+import UserCard from './Components/UserCard.jsx';
+import PropsClass from './Components/propsClass.jsx';
+import UserList from './Components/UserList';
+import InputBox from './Components/inputBox.jsx';
+import Toggle from './Components/Toggle.jsx';
+import FormHandling from './Components/FormHandling.jsx';
+import ConditionalRendering from './Components/conditionalRendering.jsx';
+import FormValidation from './Components/formValidation.jsx';
+import FuncProps from './Components/FuncProps.jsx';
+import Constructor from './Components/Constructor.jsx';
+import RenderMethod from './Components/RenderMethod.jsx';
+import ComponentDidMount from './Components/ComponentDidMount.jsx';
+import ComponentDidUpdate from './Components/ComponentDidUpdate.jsx';
+import ShouldComponentUpdate from './Components/ComponentShouldUpdate.jsx';
+import ComponentWIllUnmount from './Components/ComponentWIllUnmount.jsx';
 function App() {
 
   // function common() {
@@ -129,8 +130,10 @@ function App() {
       {/* <ComponentDidUpdate /> */}
 
 
-      <ShouldComponentUpdate />
+      {/* <ShouldComponentUpdate /> */}
 
+
+      <ComponentWIllUnmount />
 
 
     </>

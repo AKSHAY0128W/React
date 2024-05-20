@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ComponeneDidMount extends Component {
+class ComponentDidMount extends Component {
 
    // This method is called before the component is rendered in the DOM.
    constructor() {
@@ -40,4 +40,4 @@ class ComponeneDidMount extends Component {
    }
 }
 
-export default ComponeneDidMount
+export default ComponentDidMount
