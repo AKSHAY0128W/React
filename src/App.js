@@ -16,6 +16,7 @@ import FormValidation from './formValidation.jsx';
 import FuncProps from './FuncProps.jsx';
 import Constructor from './Constructor.jsx';
 import RenderMethod from './RenderMethod.jsx';
+import ComponeneDidMount from './ComponeneDidMount.jsx';
 function App() {
 
   // function common() {
@@ -113,11 +114,17 @@ function App() {
 
       {/* <Constructor /> */}
 
-      <h1>Lifecycle Render Method in React.</h1>
+      {/* <h1>Lifecycle Render Method in React.</h1> */}
       {/* <RenderMethod name={name} /> */}
-      <RenderMethod />
+      {/* <RenderMethod /> */}
 
       {/* <button onClick={() => setName("Akshay Panchal")}>Update Name</button> */}
+
+
+
+      <ComponeneDidMount />
+
+
 
     </>
   );
