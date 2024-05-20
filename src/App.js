@@ -1,49 +1,22 @@
 import React from 'react';
 import './App.css';
-
-// Example 2
-import './styles.css'
-
-// Example 4
-import Style from './style.module.css'
-
-// Example 5
-
-import "./style.scss"
+// boostrap
+import Button from 'react-bootstrap/Button';
 
 function App() {
-
-
-  // Example 3
-
-  const headline = {
-    backgroundColor: "blue",
-    color: "$333",
-    padding: "10px"
-  }
-
   return (
     <>
       <div className="App">
-        <h1>Styles Type in React.</h1>
-
-        {/* Example 1 Inline Css */}
-
-        <h1 style={{ color: "red", backgroundColor: "green", border: "20px solid black" }}>Inline Method</h1>
-
-        {/* Example 2 Normal Css */}
-        <h1 className='primary'>Normal Method</h1>
-
-        {/* Example 3 CSS in JS */}
-        <h1 style={headline}>CSS in JS</h1>
-
-        {/* Example 4 CSS in Module */}
-        <h1 className={Style.title}>Css In Module</h1>
-
-        {/* Example 5 CSS in Sass */}
-        <h1 className="primary-sass">sass & <span>scss</span> In Module</h1>
-
-
+        <h1>Install Bootstrap In React.</h1>
+        <Button variant="primary">Primary</Button>{' '}
+        <Button variant="secondary">Secondary</Button>{' '}
+        <Button variant="success">Success</Button>{' '}
+        <Button variant="warning">Warning</Button>{' '}
+        <Button variant="danger">Danger</Button>{' '}
+        <Button variant="info">Info</Button>{' '}
+        <Button variant="light">Light</Button>{' '}
+        <Button variant="dark">Dark</Button>
+        <Button variant="link">Link</Button>
       </div>
     </>
   );
