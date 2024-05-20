@@ -1,26 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-function App() {
+import UserTotal from './Components/UserTotal';
+function App(props) {
 
 
   const [count, setCount] = useState(0);
 
-  // Example 1
+  const [total, setTotal] = useState(100);
+
+
   useEffect(() => {
-    console.log("useEffect is called");
-    // alert("useEffect is called");
-    console.log("Updating");
+    // console.log("After render Count !!");
+
   }, [count])
+
+  useEffect(() => {
+    // console.log("After render Total !!");
+
+  }, [total])
+
 
   return (
     <>
       <div className="App">
-        <h1>useEffect Hook</h1>
+        <h1>useEffect Condition Hook</h1>
 
-        <p>Count:{count}</p>
+        <UserTotal count={count} total={total} />
 
-        <button onClick={() => setCount(count + 1)}>Click Me</button>
+        {/* <h2>Count: {count}</h2> */}
 
+        <button onClick={() => setCount(count + 1)} >Update Count</button>
+
+        {/* <h2>Total: {total}</h2> */}
+
+        <button onClick={() => setTotal(total + 1)} >Update Total</button>
       </div>
     </>
   );
