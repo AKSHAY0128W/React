@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ComponeneDidUpdate extends Component {
+class ComponentDidUpdate extends Component {
 
    // This method is called before the component is rendered in the DOM.
    constructor() {
@@ -11,7 +11,7 @@ class ComponeneDidUpdate extends Component {
       }
       // console.log("Constructor Called")
    }
- 
+
 
    componentDidUpdate(prevProps, prevState) {
       console.log(prevState.count, this.state.count)
@@ -46,4 +46,4 @@ class ComponeneDidUpdate extends Component {
    }
 }
 
-export default ComponeneDidUpdate
+export default ComponentDidUpdate

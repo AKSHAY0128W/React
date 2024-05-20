@@ -17,7 +17,8 @@ import FuncProps from './FuncProps.jsx';
 import Constructor from './Constructor.jsx';
 import RenderMethod from './RenderMethod.jsx';
 import ComponeneDidMount from './ComponeneDidMount.jsx';
-import ComponeneDidUpdate from './ComponentDidUpdate.jsx';
+import ComponentDidUpdate from './ComponentDidUpdate.jsx';
+import ShouldComponentUpdate from './ComponentShouldUpdate.jsx';
 function App() {
 
   // function common() {
@@ -125,7 +126,10 @@ function App() {
 
       {/* <ComponeneDidMount /> */}
 
-      <ComponeneDidUpdate />  
+      {/* <ComponentDidUpdate /> */}
+
+
+      <ShouldComponentUpdate />
 
 
 
