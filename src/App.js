@@ -1,87 +1,34 @@
 import React from 'react';
 import './App.css';
-import { Table, Container, Row, Col } from 'react-bootstrap';
+import ReuseableButtton from './ReuseableButtton';
+import ReuseableList from './ReuseableList';
 function App() {
 
-  const countriesWithCities = [
-    {
-      country: 'India',
-      cities: ['Delhi', 'Mumbai', 'Kolkata']
-    },
-    {
-      country: 'USA',
-      cities: ['New York', 'Los Angeles', 'Chicago']
-    },
-    {
-      country: 'UK',
-      cities: ['London', 'Manchester', 'Liverpool']
-    }
-  ];
+  // Example 1
 
-  const nestedData = [
-    { category: "Fruits", items: ["Apple", "Banana", "Mango"] },
-    { category: "Vegetables", items: ["Tomato", "Potato", "Onion"] },
-    { category: "Beverages", items: ["Tea", "Coffee", "Milk"] }
-  ];
+  const handleButton = () => {
+    console.log("Clicked")
+  }
+
+
+  // Example 2
+  const country = ["india", "uk", "USA", "JAPAN"]
 
   return (
     <>
       <div className="App">
-        <h1>Nested Map Function in React.</h1>
+        <h1>Reuseable Component In React.</h1>
 
         {/* Example 1 */}
-        <ul>
-          {
-            countriesWithCities.map((countryObj, index) => (
-              <li key={index}>
-                <b>{countryObj.country}</b>
-                <ul>
-                  {
-                    countryObj.cities.map((city, cityIndex) => (
-                      <li key={cityIndex}>{city}</li>
-                    ))
-                  }
-                </ul>
-              </li>
-            ))
-          }
-        </ul>
+
+        <ReuseableButtton text="Click" onClick={handleButton} />
+
+        <ReuseableButtton text="Press" onClick={handleButton} />
 
 
-        {/* Example 2 */}
+        <ReuseableList items={country} />
 
-        <Container>
-          <Row>
-            <Col>
-              <Table className="table">
-                <thead>
-                  <tr>
-                    <th>Category</th>
-                    <th>Items</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {
-                    nestedData.map((data, index) => (
-                      <tr key={index}>
-                        <td>{data.category}</td>
-                        <td>
-                          <ul className='list-unstyled'>
-                            {
-                              data.items.map((item, itemIndex) => (
-                                <li key={itemIndex}>{item}</li>
-                              ))
-                            }
-                          </ul>
-                        </td>
-                      </tr>
-                    ))
-                  }
-                </tbody>
-              </Table>
-            </Col>
-          </Row>
-        </Container>
+
       </div>
     </>
   );
