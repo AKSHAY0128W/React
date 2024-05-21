@@ -1,72 +1,72 @@
 import React from 'react';
 import './App.css';
-import Table from 'react-bootstrap/Table';
+
 function App() {
 
-  const tableData = [
+  // Example 1
+  const names = ["Alice", "bob", "charlie", "bhaskar"]
+
+
+  // Example 2
+
+  const products = [
     {
       id: 1,
-      name: 'John Doe',
-      age: 25,
-      location: 'USA'
+      name: "Product 1",
+      price: 100
     },
     {
       id: 2,
-      name: 'Jane Doe',
-      age: 25,
-      location: 'UK'
+      name: "Product 2",
+      rice: 200
     },
     {
       id: 3,
-      name: 'Tom Cruise',
-      age: 45,
-      location: 'JAPAN'
+      name: "Product 3",
+      price: 300
     },
     {
       id: 4,
-      name: 'Brad Pitt',
-      age: 35,
-      location: 'INDIA'
-    },
-    {
-      id: 5,
-      name: 'Angelina Jolie',
-      age: 30,
-      location: 'FRANCE'
+      name: "Product 4",
+      price: 400
     }
   ]
+
+  // Example 3 return map function
+
+  const fruits = ["Apple", "Banana", "Orange", "Mango"]
+
+  const fruitsItems = fruits.map((fruit, index) => <li key={index}>{fruit}</li>)
 
   return (
     <>
       <div className="App">
-        <h1>Bootstarp Table in React.</h1>
-        <div>
-          <Table striped="columns" responsive>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                tableData.map((data) => (
-                  data.age > 30 ?
+        <h1>Array With Map Function.</h1>
 
-                    <tr key={data.id}>
-                      <td>{data.id}</td>
-                      <td>{data.name}</td>
-                      <td>{data.age}</td>
-                      <td>{data.location}</td>
-                    </tr>
-                    : null
-                ))
-              }
-            </tbody>
-          </Table>
-        </div>
+        {/* Example 1 Array */}
+
+        <ul>
+          {
+            names.map((name, index) => (
+              <li key={index}>{name}</li>
+            ))
+          }
+        </ul>
+
+
+        {/* Example 2 Array Of Objects */}
+
+        <ul>
+          {
+            products.map((product) => (
+              <li key={product.id}>{product.name} - ${product.price}</li>
+            ))
+          }
+        </ul>
+
+
+        {/* Example 3 return map function */}
+        <ul>{fruitsItems}</ul>
       </div>
     </>
   );
