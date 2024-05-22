@@ -1,25 +1,37 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import './App.css';
+import ChildrenCompA from './ChildrenCompA';
+import ChildrenCompB from './ChildrenCompB';
 function App() {
+
+  // Example 1
+  const [sharedState, setSharedState] = useState("")
+
+  const handleChange = (newValue) => {
+    console.log(newValue);
+    setSharedState(newValue)
+  }
+
+  // Example 2
+
+  const parentAlert = (data) => {
+    alert(data.name);
+    console.log(data);
+  }
+
+
+
+
   return (
-
-    // Example 1
-    // <React.Fragment>
-    //   <h1>Fragment In React.</h1>
-    //   <h2>Fragment In React.</h2 >
-    // </React.Fragment>
-
-
-    // Example 2
-    // <Fragment>
-    //   <h1>Fragment In React.</h1>
-    //   <h2>Fragment In React.</h2>
-    // </Fragment>
-
-    // Example 3
     <>
-      <h1>Fragment In React.</h1>
-      <h2>Fragment In React.</h2>
+      <div className='App'>
+        <h1>Lifting State Up In React.</h1>
+
+        <ChildrenCompA sharedState={sharedState} handleChange={handleChange} />
+
+        <ChildrenCompB sharedState={sharedState} alert={parentAlert} />
+
+      </div>
     </>
 
   );
