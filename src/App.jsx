@@ -1,63 +1,47 @@
-import React from 'react'
-import { useState, useMemo } from 'react'
+import React, { Component, createRef } from 'react'
 import './App.css'
 
-function App() {
+class App extends Component {
 
-  const [number1, setNumber1] = useState(0)
-  const [number2, setNumber2] = useState(0)
-  const [count, setCount] = useState(0)
+  constructor() {
+    super()
+    this.myInputRef = createRef();
 
+  }
 
   // Example 1
 
-  // const sum = () => {
-  //   console.log("Calculate sum....!")
-
-  //   return number1 + number2;
+  // componentDidMount() {
+  //   this.myInputRef.current.value = "Bhaskar Gupta";
+  //   console.log(this.myInputRef.current.value);
   // }
 
-  // Example 2
-  const sum = useMemo(
-    () => {
-      console.log("Calculate sum....!")
+  // Example 2 
 
-      return number1 + number2;
-    }, [number1, number2]
-  )
+  handleClick = () => {
+    this.myInputRef.current.focus()
+    this.myInputRef.current.style.background = "green";
+    this.myInputRef.current.style.color = "white";
 
-  return (
-    <div className='App'>
-      <h1>useMemo hook in React.</h1>
-
-      {/* Example 1 */}
-      <div>
-        <input
-          type="number"
-          value={number1}
-          onChange={(e) => setNumber1(Number(e.target.value))} />
+    console.log(this.myInputRef.current.value);
 
 
-        <input
-          type="number"
-          value={number2}
-          onChange={(e) => setNumber2(Number(e.target.value))} />
-
-        {/* <p>Sum :{sum()}</p> */}
-
-        {/* Example 2 call function with useMemo */}
-        <p>Sum :{sum}</p>
+  }
 
 
 
 
+  render() {
+    // console.log(this.myInputRef);
+    return (
+      <div className='App'>
+        <h1>Ref in React.</h1>
+        <input type="text" ref={this.myInputRef} />
 
+        <button onClick={this.handleClick}>Focut input</button>
       </div>
-
-      <p>Count : {count}</p>
-      <button onClick={() => setCount(count + 1)}>Count ++</button>
-    </div>
-  )
+    )
+  }
 }
 
-export default App
+export default App;
