@@ -1,47 +1,30 @@
-import React, { Component, createRef } from 'react'
+import React, { useRef } from 'react'
 import './App.css'
-
-class App extends Component {
-
-  constructor() {
-    super()
-    this.myInputRef = createRef();
-
-  }
+function App() {
 
   // Example 1
-
-  // componentDidMount() {
-  //   this.myInputRef.current.value = "Bhaskar Gupta";
-  //   console.log(this.myInputRef.current.value);
-  // }
-
-  // Example 2 
-
-  handleClick = () => {
-    this.myInputRef.current.focus()
-    this.myInputRef.current.style.background = "green";
-    this.myInputRef.current.style.color = "white";
-
-    console.log(this.myInputRef.current.value);
+  const inputRef = useRef(null)
 
 
+  // Example 2
+  const handleButtonClick = () => {
+    const value = inputRef.current.value
+    alert(`Input Value: ${value}`)
+    console.log(value);
   }
 
 
+  return (
+    <div className='App'>
+      <h1>useRef Hook in React.</h1>
 
+      {/* Example 1 */}
 
-  render() {
-    // console.log(this.myInputRef);
-    return (
-      <div className='App'>
-        <h1>Ref in React.</h1>
-        <input type="text" ref={this.myInputRef} />
+      <input ref={inputRef} type='text' />
+      <button onClick={handleButtonClick}>Get Input Value</button>
 
-        <button onClick={this.handleClick}>Focut input</button>
-      </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default App;
+export default App
