@@ -1,44 +1,32 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import './App.css'
-import ChildComp from './ChildComp';
-
+import Counter from './Counter'
 
 function App() {
-  // Normal Example 
-  const [count1, setCount1] = useState(0)
 
-  console.log("Parent Rendered!!");
+  // Example 1
 
-
-  // Example 2
-
-  const [count2, setCount2] = useState(0)
-
-  const incrementCount2 = useCallback(() => {
-    setCount2((prevCount) => prevCount + 1)
-    console.log("useCallback Hook")
-  }, [])
-
+  const [count, setCount] = useState(0)
   return (
     <div className='App'>
-      <h1>useCallback hook in React.</h1>
-
-
-
-
+      <h1>useReducer hook in React.</h1>
 
       {/* Example 1 */}
-      <p>Count1 : {count1}</p>
 
-      <button onClick={() => setCount1(count1 + 1)}>Increment Count1</button>
+      <p>Count : {count}</p>
 
+      <button onClick={() => { setCount(count + 1) }}>INCREMENT</button>
+      <br />
+      <br />
+      <button onClick={() => { setCount(count - 1) }}>DECREMENT</button>
 
-      <br /><br /><br />
 
       {/* Example 2 */}
 
-      <p>Count 2 : {count2}</p>
-      <ChildComp increment={incrementCount2} />
+      <Counter />
+
+
+
 
     </div>
   )
