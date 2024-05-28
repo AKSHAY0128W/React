@@ -1,35 +1,29 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import './App.css'
-import Counter from './Counter'
+import Child1 from './Child1'
+
+// create,provide,useContext
+const MyContext = createContext();
 
 function App() {
 
-  // Example 1
+  const sharedData = "Hello from Parent!!";
 
-  const [count, setCount] = useState(0)
   return (
     <div className='App'>
-      <h1>useReducer hook in React.</h1>
+      <MyContext.Provider value={sharedData}>
 
-      {/* Example 1 */}
+        <h1>useContext hook in React.</h1>
 
-      <p>Count : {count}</p>
+        {/* example 1 */}
 
-      <button onClick={() => { setCount(count + 1) }}>INCREMENT</button>
-      <br />
-      <br />
-      <button onClick={() => { setCount(count - 1) }}>DECREMENT</button>
+        <Child1 />
 
-
-      {/* Example 2 */}
-
-      <Counter />
-
-
-
+      </MyContext.Provider>
 
     </div>
   )
 }
 
 export default App
+export { MyContext };
