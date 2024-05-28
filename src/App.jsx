@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react'
 import './App.css'
 import ChildComp from './ChildComp';
 
+
 function App() {
   // Normal Example 
   const [count1, setCount1] = useState(0)
@@ -21,6 +22,9 @@ function App() {
   return (
     <div className='App'>
       <h1>useCallback hook in React.</h1>
+
+
+
 
 
       {/* Example 1 */}
