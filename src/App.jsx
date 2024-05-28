@@ -1,29 +1,30 @@
-import React, { createContext, useState } from 'react'
+import React, { useState, createContext } from 'react'
 import './App.css'
 import Child1 from './Child1'
 
-// create,provide,useContext
+// Create, Provider, Consumer
+
 const MyContext = createContext();
+const MyContextNew = createContext();
+
 
 function App() {
 
-  const sharedData = "Hello from Parent!!";
+  const sharedData = "Hello From Parent!!";
+  const newSharedData = "Multiple Entry!!";
+
 
   return (
     <div className='App'>
       <MyContext.Provider value={sharedData}>
-
-        <h1>useContext hook in React.</h1>
-
-        {/* example 1 */}
-
-        <Child1 />
-
+        <MyContextNew.Provider value={newSharedData}>
+          <h1>Context API in React.</h1>
+          <Child1 />
+        </MyContextNew.Provider>
       </MyContext.Provider>
-
     </div>
   )
 }
 
 export default App
-export { MyContext };
+export { MyContext, MyContextNew }
