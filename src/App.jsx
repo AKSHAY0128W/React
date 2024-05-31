@@ -1,55 +1,43 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import React, { useEffect, useState, useDeferredValue } from 'react'
 import './App.css'
+import List from './List'
 
 
 function App() {
 
-  // Example 1
-  const [isPending, startTransition] = useTransition()
-  const [count, setCount] = useState(0) // Use useState here, not useEffect
+  const [input, setInput] = useState()
 
+
+  const handleChange = (e) => {
+    setInput(e.target.value)
+  }
 
   // Example 2
 
-  const [input, setInput] = useState()
-  const [dataList, setDataList] = useState([])
+  const [count, setCount] = useState(0)
+
+  const deferredValue = useDeferredValue(count)
 
 
-  const dataSize = 10000;
-
-  // Function 
-  const handleChange = (e) => {
-
-    setInput(e.target.value);
-    startTransition(() => {
-      const a = [];
-      for (let i = 0; i < dataSize; i++) {
-        a.push(e.target.value)
-      }
-      setDataList(a);
-    })
-  };
+  useEffect(() => {
+    console.log(`Count:${count} \nDeferred ${deferredValue}`);
+  });
 
 
 
   return (
     <div className='App'>
-      <h1>useTransition hook in React.</h1>
+      <h1>useDeferredValue hook in React.</h1>
+      <input type="text" value={input} onChange={handleChange} />
+
+      <List input={input} />
+
 
       {/* Example 2 */}
 
-      <input type="text" value={input} onChange={handleChange} />
-      {
-        isPending ?
-          <div className="spinner-border mt-5 text-primary" role="status">
-            <span className="sr-only"></span>
-          </div> : // Display a spinner when isPending is true
-          dataList.map((item, index) => {
-            return <div key={index}>{item}</div>
-          })
-      }
+      <h2>Count No:{count}</h2>
 
-
+      <button onClick={() => setCount(count + 1)}>Update Count</button>
     </div >
   )
 }
