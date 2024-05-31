@@ -1,43 +1,21 @@
 import React, { useEffect, useState, useDeferredValue } from 'react'
 import './App.css'
-import List from './List'
-
-
+import Email from './Email'
 function App() {
-
-  const [input, setInput] = useState()
-
-
-  const handleChange = (e) => {
-    setInput(e.target.value)
-  }
-
-  // Example 2
-
-  const [count, setCount] = useState(0)
-
-  const deferredValue = useDeferredValue(count)
-
-
-  useEffect(() => {
-    console.log(`Count:${count} \nDeferred ${deferredValue}`);
-  });
-
-
-
   return (
     <div className='App'>
-      <h1>useDeferredValue hook in React.</h1>
-      <input type="text" value={input} onChange={handleChange} />
+      <h1>useId hook in React.</h1>
 
-      <List input={input} />
+      {/* Example 1 */}
 
+      <Email />
 
-      {/* Example 2 */}
+      <article>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam exercitationem autem, cumque at esse magni, velit accusamus nobis animi alias sapiente ullam reiciendis adipisci quos recusandae laboriosam totam accusantium fugiat sed similique, temporibus ut laudantium. Nobis laudantium, nihil distinctio fuga cumque optio! Nostrum consequuntur ex quam expedita odit aspernatur ipsam illo est iste, enim ut quae, sunt natus, reprehenderit voluptatibus assumenda. Aliquam id impedit sunt distinctio doloremque voluptate possimus eveniet tempora eius neque reprehenderit, sed voluptatem repellendus. Est adipisci facilis consequatur impedit officiis ipsam placeat officia at reiciendis aliquam cupiditate, debitis autem ut, amet numquam?
+      </article>
 
-      <h2>Count No:{count}</h2>
+      <Email />
 
-      <button onClick={() => setCount(count + 1)}>Update Count</button>
     </div >
   )
 }
